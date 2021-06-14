@@ -21,6 +21,3 @@ for i in range(0, 20):
 
 
 
-def eliminar_impares():
-    
-
