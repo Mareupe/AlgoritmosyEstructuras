@@ -28,7 +28,7 @@ def potencia(b, e):
     else:
         return b * potencia(b, e - 1)
 
-def binario(numero):
+def romano_decimal(numero):
     """Ejercicio 5: convertir de romano a decimal"""
     if (numero == ""):
         return (0)
@@ -47,10 +47,10 @@ def binario(numero):
     elif (numero == "I"):
         return (1)
     else:
-        if (binario(numero[0]) < binario(numero[1])):
-            return (binario(numero[1]) - binario(numero[0])) + binario(numero[2:] )
+        if (romano_decimal(numero[0]) < romano_decimal(numero[1])):
+            return (romano_decimal(numero[1]) - romano_decimal(numero[0])) + romano_decimal(numero[2:] )
         else:
-            return (binario(numero[0]) + binario(numero[1:]))
+            return (romano_decimal(numero[0]) + romano_decimal(numero[1:]))
 
 def invertir_cadena(cad):
     """Ejercicio 6: invierte la cadena"""
@@ -59,7 +59,16 @@ def invertir_cadena(cad):
     else:
         return cad[-1] + invertir_cadena(cad[0:-1])
 
-def calcular_serie(num): #7
+def invertir_numero(numero):
+    """Ejercicio 6: Invertir un número."""
+    if(numero < 10):
+        return numero
+    else:
+        return ((numero % 10) * 10 ** len(str(numero//10))) + invertir_numero(numero // 10)
+
+
+def calcular_serie(num):
+    """Ejercicio 7: Calcular una serie"""
     if (num >= 1):
         return calcular_serie(num - 1) + 1/num
     else:
@@ -73,16 +82,9 @@ def decimal_binario(numero):
     else:
         return decimal_binario(numero//2) + str(numero % 2)
 
-def invertir_numero(numero):
-    """Invertir un número."""
-    if(numero < 10):
-        return numero
-    else:
-        return ((numero % 10) * 10 ** len(str(numero//10))) + invertir_numero(numero // 10)
 
-
-
-def usar_fuerza(mochila, pos):#22
+def usar_fuerza(mochila, pos):
+    """Ejercicio 22: La mochila Jedi"""
     if(pos< len(mochila)):
         if(mochila[pos] == 'Sable de luz'):
             return pos
@@ -90,6 +92,40 @@ def usar_fuerza(mochila, pos):#22
             return usar_fuerza(mochila, pos+1)
     else:
         return -1
+
+
+# def salida_laberinto(matriz, x, y, caminos=[]):
+#     """Ejercicio 24: Salida del laberinto."""
+#     if(x >= 0 and x <= len(matriz)-1) and (y >= 0 and y <= len(matriz[0])-1):
+#         if(matriz[x][y] == 2):
+#             caminos.append([x, y])
+#             print("Saliste del laberinto")
+#             print(caminos)
+#             caminos.pop()
+#         elif(matriz[x][y] == 1):
+#             matriz[x][y] = 3
+#             caminos.append([x, y])
+#             print("mover este")
+#             salida_laberinto(matriz, x, y+1, caminos)
+#             print("mover oeste")
+#             salida_laberinto(matriz, x, y-1, caminos)
+#             print("mover norte")
+#             salida_laberinto(matriz, x-1, y, caminos)
+#             print("mover sur")
+#             salida_laberinto(matriz, x+1, y, caminos)
+#             caminos.pop()
+#             matriz[x][y] = 1
+
+# lab = [[1, 1, 1, 1, 1, 1, 1],
+#        [0, 0, 0, 0, 1, 0, 1],
+#        [1, 1, 1, 0, 1, 0, 1],
+#        [1, 0, 1, 1, 1, 1, 1],
+#        [1, 0, 0, 0, 0, 0, 0],
+#        [1, 1, 1, 1, 1, 1, 2]]
+    
+# salida_laberinto(lab, 0, 0)
+
+
 
 
 
