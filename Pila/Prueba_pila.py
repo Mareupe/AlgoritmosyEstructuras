@@ -70,7 +70,7 @@ pila_aux = Pila()
 #     print(x)
 
 
-# """Ejercicio 22"""
+"""Ejercicio 22"""
 
 # datos_Bobba_Fett = [["Alderan","Han Solo",300],["Tatoine","Luke",600]]
 
@@ -140,46 +140,46 @@ pila_aux = Pila()
 # print('La cantidad de capturas de Din Djarin es:', pila_aux_D.tamanio())
 
 
-"""Ejercicio 23"""
+"""Ejercicio 24"""
 
-Marvel = [['Rocket Raccoon', 2],['Groot', 1],['Black Widow', 6]]
+# Marvel = [['Rocket Raccoon', 2],['Groot', 1],['Black Widow', 6]]
 
-pila_marvel = Pila()
-pila_auxm = Pila()
+# pila_marvel = Pila()
+# pila_auxm = Pila()
 
-for element in Marvel:
-    pila_marvel.apilar(element)
-#A
-Rpos = 0
-Gpos = 0
+# for element in Marvel:
+#     pila_marvel.apilar(element)
+# #A
+# Rpos = 0
+# Gpos = 0
 
-while not pila_marvel.pila_vacia():
-    R = pila_marvel.desapilar()
-    Rpos += 1
-    Gpos += 1
-    if R[0] == 'Rocket Raccoon':
-        print('Rocket Raccoon se encuentra en la posicion:', Rpos)
-    if R[0] == 'Groot':
-        print('Groot se encuentra en la posicion:', Gpos)
-    pila_auxm.apilar(R)
+# while not pila_marvel.pila_vacia():
+#     R = pila_marvel.desapilar()
+#     Rpos += 1
+#     Gpos += 1
+#     if R[0] == 'Rocket Raccoon':
+#         print('Rocket Raccoon se encuentra en la posicion:', Rpos)
+#     if R[0] == 'Groot':
+#         print('Groot se encuentra en la posicion:', Gpos)
+#     pila_auxm.apilar(R)
 
-#B
-while not pila_auxm.pila_vacia():
-    X = pila_auxm.desapilar()
-    if X[1] >= 5:
-        print('El personaje:', X[0], 'aparece en:', X[1])
-    pila_marvel.apilar(X)
+# #B
+# while not pila_auxm.pila_vacia():
+#     X = pila_auxm.desapilar()
+#     if X[1] >= 5:
+#         print('El personaje:', X[0], 'aparece en:', X[1])
+#     pila_marvel.apilar(X)
 
-#C
-while not pila_marvel.pila_vacia():
-    T = pila_marvel.desapilar()
-    if T[0] == 'Black Widow':
-        print('Black Widow participo en:', T[1])
-    pila_auxm.apilar(T)
+# #C
+# while not pila_marvel.pila_vacia():
+#     T = pila_marvel.desapilar()
+#     if T[0] == 'Black Widow':
+#         print('Black Widow participo en:', T[1])
+#     pila_auxm.apilar(T)
 
-#D
-while not pila_auxm.pila_vacia():
-    T = pila_auxm.desapilar()
-    if(T[0][0] in ['C', 'D', 'G']):
-        print('Comienza con C, D, G:', T[0])
-    pila_marvel.apilar(T)
+# #D
+# while not pila_auxm.pila_vacia():
+#     T = pila_auxm.desapilar()
+#     if(T[0][0] in ['C', 'D', 'G']):
+#         print('Comienza con C, D, G:', T[0])
+#     pila_marvel.apilar(T)
