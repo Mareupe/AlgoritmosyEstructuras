@@ -95,7 +95,7 @@ def usar_fuerza(mochila, pos):
 
 
 # def salida_laberinto(matriz, x, y, caminos=[]):
-#     """Ejercicio 24: Salida del laberinto."""
+#     """Ejercicio 23: Salida del laberinto."""
 #     if(x >= 0 and x <= len(matriz)-1) and (y >= 0 and y <= len(matriz[0])-1):
 #         if(matriz[x][y] == 2):
 #             caminos.append([x, y])
