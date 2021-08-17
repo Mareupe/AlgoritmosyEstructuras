@@ -21,3 +21,9 @@ class Cola(object):
     
     def tamanio(self):
         return len(self.__elementos)
+
+#Barrido
+# while(not cola_.cola_vacia()):
+#     dato = cola_.atencion()
+#     print(dato)
+# print()

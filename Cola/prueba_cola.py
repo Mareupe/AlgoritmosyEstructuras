@@ -65,6 +65,9 @@ cola_aux = Cola()
 # while not cola_1.cola_vacia() and not cola_2.cola_vacia():
     
 
+""""Ejercicio16"""""
+
+
 """Ejercicio 22"""
 
 # cola_MCU = Cola()
