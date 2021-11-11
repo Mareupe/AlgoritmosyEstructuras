@@ -1,5 +1,6 @@
 from cola import Cola
 from random import randint
+from heap import HeapMax
 
 cola_datos = Cola()
 cola_aux = Cola()
@@ -65,7 +66,7 @@ cola_aux = Cola()
 # while not cola_1.cola_vacia() and not cola_2.cola_vacia():
     
 
-""""Ejercicio16"""""
+
 
 
 """Ejercicio 22"""
@@ -122,3 +123,41 @@ cola_aux = Cola()
 #     if (aux[0] in ['Carol Danvers']):
 #         print(aux[0],'se encuentra en la cola, y su superhéroe se llama', aux[1])
 #     cola_auxM.arribo(aux)
+
+
+"""Ejercicio 16"""
+
+cola_prioridad = HeapMax()
+
+#A
+cola_prioridad.arribo('DocEmpleado1', 1)
+cola_prioridad.arribo('DocEmpleado2', 1)
+cola_prioridad.arribo('DocEmpleado3', 1)
+
+#B
+print('Primer elemento de la cola:')
+print(cola_prioridad.atencion()[1])
+print('')
+
+#C
+cola_prioridad.arribo('DocStaffTI1', 2)
+cola_prioridad.arribo('DocStaffTI2', 2)
+
+#D
+cola_prioridad.arribo('DocGerente1', 3)
+
+#E
+print('Los dos primeros documentos de la cola:')
+print(cola_prioridad.atencion()[1])
+print(cola_prioridad.atencion()[1])
+print('')
+
+#F
+cola_prioridad.arribo('DocEmpleado4', 1)
+cola_prioridad.arribo('DocEmpleado5', 1)
+cola_prioridad.arribo('DocGerente2', 3)
+
+#G
+print('Lista de documentos de la cola:')
+while (not cola_prioridad.vacio()):
+    print(cola_prioridad.atencion()[1])
