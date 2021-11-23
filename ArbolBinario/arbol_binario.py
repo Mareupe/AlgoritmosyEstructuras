@@ -217,7 +217,7 @@ class Arbol(object):
                 cantidad += self.izq.contar_heroes(buscado)
             if(self.der is not None):
                 cantidad += self.der.contar_heroes(buscado)
-        return cantidad
+        return cantidad 
     
     def mostrar_criaturas_derrotadas(self, buscado):
         if(self.info is not None):
