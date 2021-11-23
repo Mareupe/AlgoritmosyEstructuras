@@ -96,6 +96,15 @@ class Arbol(object):
             if(self.der is not None):
                 self.der.inorden_nombreC()
 
+    def inorden_villanos(self):
+        if(self.info is not None):
+            if(self.izq is not None):
+                self.izq.inorden_villanos()
+            if(self.datos['heroe']== False):
+                print(self.info, self.datos)
+            if(self.der is not None):
+                self.der.inorden_villanos()
+
     def postorden(self):
         if(self.info is not None):
             if(self.der is not None):

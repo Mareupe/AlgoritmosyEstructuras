@@ -34,65 +34,65 @@ arbol = Arbol()
 
 
 """Ejercicio 5"""
-# datos = [
-#     {'nombre':'Iron Man', 'heroe': True},
-#     {'nombre':'Thanos', 'heroe': False},
-#     {'nombre':'Kang', 'heroe': False},
-#     {'nombre':'Captain Marvel', 'heroe': True},
-#     {'nombre':'Agatha Harkness', 'heroe': False},
-#     {'nombre':'Captain America', 'heroe': True},
-#     {'nombre':'Taneleer Tivan', 'heroe': False},
-#     {'nombre':'Black Widow', 'heroe': True},
-#     {'nombre':'Doctor Strnge', 'heroe': True},
-#     {'nombre':'Scarlet Witch', 'heroe': True}
-# ]
+datos = [
+    {'nombre':'Iron Man', 'heroe': True},
+    {'nombre':'Thanos', 'heroe': False},
+    {'nombre':'Kang', 'heroe': False},
+    {'nombre':'Captain Marvel', 'heroe': True},
+    {'nombre':'Agatha Harkness', 'heroe': False},
+    {'nombre':'Captain America', 'heroe': True},
+    {'nombre':'Taneleer Tivan', 'heroe': False},
+    {'nombre':'Black Widow', 'heroe': True},
+    {'nombre':'Doctor Strnge', 'heroe': True},
+    {'nombre':'Scarlet Witch', 'heroe': True}
+]
 
-# for elemento in datos:
-#     arbol = arbol.insertar_nodo(elemento['nombre'],elemento)
+for elemento in datos:
+    arbol = arbol.insertar_nodo(elemento['nombre'],elemento)
 
-# print('B: Lista de villanos ordenados alfabéticamente')
-# arbol.inorden()
-# print('')
+print('B: Lista de villanos ordenados alfabéticamente')
+arbol.inorden_villanos()
+print('')
 
-# print('C: Superheroes que comienzan con C')
+print('C: Superheroes que comienzan con C')
 
-# arbol.inorden_nombreC()
-# print('')
+arbol.inorden_nombreC()
+print('')
 
-# print('D')
+print('D')
 
-# print('En el árbol hay:',arbol.contar_heroes(True), 'Superheroes')
-# print('')
+print('En el árbol hay:',arbol.contar_heroes(True), 'Superheroes')
+print('')
 
-# print('E: Modificar el nombre de un Superheroe')
+print('E: Modificar el nombre de un Superheroe')
+# Doctor Strnge
+buscado = input('ingrese a quien buscar:')
+arbol.busqueda_proximidad(buscado)
+buscado = input('ingrese a quien quiere cambiar el nombre:')
+buscado2 = input('ingrese nuevo nombre:')
+clave, dato = arbol.eliminar_nodo(buscado)
+dato['nombre'] = buscado2
+arbol = arbol.insertar_nodo(buscado2, dato)
+arbol.inorden()
+print('')
 
-# buscado = input('ingrese a quien buscar:')
-# arbol.busqueda_proximidad(buscado)
-# buscado = input('ingrese a quien quiere cambiar el nombre:')
-# buscado2 = input('ingrese nuevo nombre:')
-# clave, dato = arbol.eliminar_nodo(buscado)
-# dato['nombre'] = buscado2
-# arbol = arbol.insertar_nodo(buscado2,dato)
-# arbol.inorden()
-# print('')
+print('F: Listado de Superheroes de manera descendente')
+arbol.postorden()
+print('')
 
-# print('F: Listado de Superheroes de manera descendente')
-# arbol.postorden()
-# print('')
+print('G')
 
-# print('G')
+arbolV = Arbol()
+arbolH = Arbol()
 
-# arbolV = Arbol()
-# arbolH = Arbol()
+arbolH = arbol.separar_arbol_Heroe_Villano(arbolH, True)
+arbolV = arbol.separar_arbol_Heroe_Villano(arbolV, False)
 
-# arbolH = arbol.separar_arbol_Heroe_Villano(arbolH, True)
-# arbolV = arbol.separar_arbol_Heroe_Villano(arbolV, False)
-
-# print('El Arbol de Superheroes tiene:',arbolH.contar_heroes(True),'Nodos')
-# arbolH.inorden()
-# print('')
-# print('El Arbol de Villanos tiene:',arbolV.contar_heroes(False),'Nodos')
-# arbolV.inorden()
+print('El Arbol de Superheroes tiene:',arbolH.contar_heroes(True),'Nodos')
+arbolH.inorden()
+print('')
+print('El Arbol de Villanos tiene:',arbolV.contar_heroes(False),'Nodos')
+arbolV.inorden()
 
 """Ejercicio 16"""
 
@@ -297,3 +297,6 @@ arbol = Arbol()
 
 # print('N: Criaturas capturadas por Heracles')
 # arbol.mostrar_criaturas_derrotadas('Heracles')
+
+
+
